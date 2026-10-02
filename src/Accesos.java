@@ -17,19 +17,23 @@ public class Accesos {
         System.out.print("Ingresa tu contraseña: ");
         String contrasenia = sc.nextLine();
 
+        // Variable que va a guardar los intentos
         byte intentos = 1;
+        final byte MAX_INTENTOS = 3;
 
-        while(intentos <= 3){
+        // Permite que intentos sea: 1, 2
+        while(intentos <= MAX_INTENTOS){
 
+            // validarCredenciales debería devolver false para ejecutar este bloque
             if(!validarCredenciales(usuario, contrasenia)){
 
-                if(intentos == 3){
+                if(intentos == MAX_INTENTOS){
                     System.out.println("\nERROR: Haz alcanzado tu límite de intentos. Prueba más tarde.");
                     break;
                 }// if
 
                 System.out.println("\nERROR: Datos incorrectos. Intenta nuevamente.");
-                System.out.println("Intentos restantes: " + (3-intentos));
+                System.out.println("Intentos restantes: " + (MAX_INTENTOS-intentos));
                 System.out.println("=============================================");
                 System.out.print("Ingresa tu usuario nuevamente: ");
                 usuario = sc.nextLine();
