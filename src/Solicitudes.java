@@ -4,7 +4,7 @@ public class Solicitudes {
 
         // Declaro mi arreglo con los estatus de las solicitudes
         String[] solicitudes = {"aprobada", "rechazada", "rechazada",
-                "rechazada", "pendiente", "aprobada", "rechazada"};
+                "rechazada", "pendiente", "aprobada", "rechazada", "pendiente"};
 
         // Llamada a la función. Ya muestra directo los mensajes
         contarSolicitudes(solicitudes);
@@ -45,10 +45,11 @@ public class Solicitudes {
             }// switch
         }// forEach
 
+        // Resultados
         System.out.println("\n-====== Resumen de revisión ======-");
         System.out.println("Solicitudes aprobadas: " + aprobadas);
         System.out.println("Solicitudes pendientes: " + pendientes);
         System.out.println("Solicitudes rechazadas: " + rechazadas);
     }// contarSolicitudes
 
-}// class
+}// class Solicitudes
